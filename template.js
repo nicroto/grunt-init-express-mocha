@@ -59,7 +59,8 @@ exports.template = function(grunt, init, done) {
 			"grunt-contrib-watch": "~0.5.3",
 			"grunt": "~0.4.1",
 			"grunt-simple-mocha": "~0.4.0",
-			"mocha": "~1.13.0"
+			"mocha": "~1.13.0",
+			"should": "~3.3.1"
 		};
 		props.travis = /y/i.test(props.travis);
 

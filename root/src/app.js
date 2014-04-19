@@ -6,18 +6,20 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
-var express  = require('express');
-var app = express();
+'use strict';
 
-app.configure('development', function(){
+var express  = require('express'),
+	app = express();
+
+app.configure( "development", function() {
 	// any configurations for development mode
-});
-app.configure('production', function(){
+} );
+app.configure( "production", function() {
 	// any configurations for production mode
-});
+} );
 
 //Example data submission
-//app.post("/data", express.bodyParser(), function (req, res) {
+//app.post( "/data", express.bodyParser(), function (req, res) {
 
 //	var dataFieldA = req.body.dataFieldA;
 //	var dataFieldB = req.body.dataFieldB;
@@ -27,10 +29,10 @@ app.configure('production', function(){
 //	...
 
 //	res.end();
-//});
+//} );
 
 //Example data read
-//app.get("/data", function (req, res) {
+//app.get( "/data", function (req, res) {
 
 //	var response = {
 //		dataFieldA: get persisted dataFieldA,
@@ -38,12 +40,12 @@ app.configure('production', function(){
 //		...
 //	}
 
-//	res.write(JSON.stringify(response));
+//	res.write( JSON.stringify( response ) );
 
 //	res.end();
 //});
 
 //static resources
-//app.use(express.static("client"));
+//app.use( express.static( "client" ) );
 
-app.listen(process.env.VCAP_APP_PORT || 3000);
+app.listen( process.env.PORT || 3000 );
