@@ -10,10 +10,10 @@
 var should = require("should"),
 	{%= js_test_safe_name %} = require("../src/custom-modules/sample-{%= name %}-module.js");
 
-describe( '{%= name %}', function() {
-	describe( 'awesome()', function() {
-		it('should be awesome', function() {
-			{%= js_test_safe_name %}.awesome().should.equal( 'awesome' );
+describe( "{%= name %}", function() {
+	describe( "awesome()", function() {
+		it( "should be awesome", function() {
+			{%= js_test_safe_name %}.awesome().should.equal( "awesome" );
 		} );
 	} );
 } );
