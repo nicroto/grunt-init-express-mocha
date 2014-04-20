@@ -21,7 +21,11 @@ module.exports = function(grunt) {
 			}
 		},
 		simplemocha: {
-			all: { src: 'test/**/*-test.js' }
+			all: { src: 'test/**/*-test.js' },
+			options: {
+				ui: 'bdd',
+				reporter: 'spec'
+			}
 		},
 
 		watch: {
@@ -46,5 +50,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// ci task
-	grunt.registerTask('default', ['jshint:all', 'simplemocha']);
+	grunt.registerTask('default', ['simplemocha', 'jshint:all']);
 };
